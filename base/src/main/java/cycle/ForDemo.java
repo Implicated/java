@@ -34,6 +34,8 @@ public class ForDemo {
     }
     
     private void fun(Integer integer) {
+        
+        
         System.out.println("fun" + integer);
     }
 }
