@@ -21,4 +21,7 @@ public class Children extends Parent {
     // 返回类型不一样和父类
     // private List<Integer> list;
     private List<String> list;
+    
+    private String name = "children";
+    public String nick = "children";
 }

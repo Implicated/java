@@ -1,5 +1,7 @@
 package extend;
 
+import lombok.Data;
+
 import java.util.List;
 
 /**
@@ -11,8 +13,11 @@ import java.util.List;
  * @version 1.0
  * @since 3/25/22 16:36
  */
-
+@Data
 public class Parent {
     private Integer id;
     private List<String> list;
+    
+    private String name = "parent";
+    public String nick = "parent";
 }

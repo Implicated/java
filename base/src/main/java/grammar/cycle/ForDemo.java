@@ -1,4 +1,4 @@
-package cycle;
+package grammar.cycle;
 
 import org.junit.Test;
 

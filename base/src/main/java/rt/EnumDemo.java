@@ -1,4 +1,4 @@
-package collect.enums;
+package rt;
 
 import org.junit.Test;
 

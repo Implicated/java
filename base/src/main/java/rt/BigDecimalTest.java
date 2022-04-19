@@ -1,4 +1,4 @@
-package math;
+package rt;
 
 import cn.hutool.core.util.NumberUtil;
 import org.junit.Test;

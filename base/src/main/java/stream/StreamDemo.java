@@ -2,9 +2,7 @@ package stream;
 
 import org.junit.Test;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -32,6 +30,21 @@ public class StreamDemo {
         sortMap.forEach((k, v) -> System.out.println(k + ":" + v));
         
         // appTradeNum.entrySet().stream().sorted(Map.Entry.<Long, Long>comparingByValue().reversed()).forEachOrdered(e -> finalMap.put(e.getKey(), e.getValue()));
+    }
+    
+    @Test
+    public void one() {
+        List<Integer> list = Arrays.asList(1, 2, 3, 4);
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(1, 1);
+        map.put(2, 2);
+        map.put(3, 3);
         
+        list.forEach(e->{
+            if (map.containsKey(e)) {
+                System.out.println("---------------");
+                return;
+            }
+        });
     }
 }
