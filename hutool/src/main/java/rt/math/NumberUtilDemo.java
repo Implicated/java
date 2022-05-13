@@ -19,6 +19,8 @@ public class NumberUtilDemo {
     
     @Test
     public void bigDecimal() {
+        System.out.println(BigDecimal.TEN.divide(BigDecimal.ZERO, RoundingMode.UP));
+        System.out.println(NumberUtil.div(4, 0, 4, RoundingMode.HALF_UP));
         System.out.println(NumberUtil.div(4, 21, 4, RoundingMode.HALF_UP));
         System.out.println(NumberUtil.div(NumberUtil.mul(4, BigDecimal.TEN, BigDecimal.TEN), 21, 2, RoundingMode.HALF_UP));
     }

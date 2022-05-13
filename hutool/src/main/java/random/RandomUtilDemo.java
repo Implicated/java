@@ -19,9 +19,9 @@ public class RandomUtilDemo {
     @Test
     public void one() {
         List<Integer> l = new ArrayList<>();
-        // for (int i = 0; i < 1; i++) {
-        //     l.add(i);
-        // }
+        for (int i = 0; i < 1; i++) {
+            l.add(i);
+        }
          RandomUtil.randomEleList(l, 5).forEach(System.out::println);
     }
 }
