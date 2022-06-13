@@ -1,4 +1,5 @@
-import lombok.SneakyThrows;
+package lombok;
+
 import org.junit.Test;
 
 /**

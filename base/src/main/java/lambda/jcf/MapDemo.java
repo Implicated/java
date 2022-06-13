@@ -3,9 +3,9 @@ package lambda.jcf;
 import cn.hutool.core.lang.Pair;
 import cn.hutool.core.map.MapUtil;
 import org.junit.Test;
+import pojo.User;
 
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 
 /**
  * <p>
@@ -19,6 +19,28 @@ import java.util.Map;
 @SuppressWarnings("all")
 public class MapDemo {
     Map<Integer, String> map = MapUtil.of(Pair.of(0, null), Pair.of(1, "I"), Pair.of(1, "I"), Pair.of(2, "love"), Pair.of(3, "you"), Pair.of(4, "too"));
+    Map<Integer, List<User>> userMap = MapUtil.of(Pair.of(0, User.getList()), Pair.of(1, User.getList()), Pair.of(1, User.getList()));
+    
+    
+    @Test
+    public void removeIf() {
+        // userMap.forEach((K, v) -> {
+        //     v.forEach(user -> {
+        //         if (Objects.isNull(user) || !(user.getAge() > 5)) {
+        //             v.remove(user);
+        //         }
+        //     });
+        // });
+        userMap.forEach((k, v) -> {
+            Iterator<User> iterator = v.iterator();
+            if (Objects.isNull(iterator.next()) || !(iterator.next().getAge() > 5)) {
+                iterator.remove();
+            }
+        });
+        userMap.forEach((k,v)->{
+            System.out.println("k:" + k + " v:" + v);
+        });
+    }
     
     /**
      * 获取value，不存在返回default

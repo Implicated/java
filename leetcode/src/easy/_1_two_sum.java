@@ -68,7 +68,6 @@ public class _1_two_sum {
         return index;
     }
     
-    
     private static int[] twoSum2(int[] nums, int target) {
         int[] index = new int[2];
         Map<Integer, Integer> map = new HashMap<>();

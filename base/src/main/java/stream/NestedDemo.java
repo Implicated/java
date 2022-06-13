@@ -27,23 +27,23 @@ public class NestedDemo {
         List<Object> collect = values.stream().flatMap(e -> e.getLst().stream()).collect(Collectors.toList());
         List<Object> collect1 = map.values().stream().flatMap(e -> e.lst.stream()).collect(Collectors.toList());
         
-        List<List<User>> list = new ArrayList<>();
-        List<User> collect2 = list.stream().flatMap(e -> Stream.of(e.toArray(new User[0]))).collect(Collectors.toList());
+        List<List<InnderClass>> list = new ArrayList<>();
+        List<InnderClass> collect2 = list.stream().flatMap(e -> Stream.of(e.toArray(new InnderClass[0]))).collect(Collectors.toList());
     }
     
     @Test
     public void two() {
-        Collection<User> m = new ArrayList<>();
+        Collection<InnderClass> m = new ArrayList<>();
         Stream<Object> objectStream = m.stream().map(e -> e.value);
         
-        List<User> l = new ArrayList<>();
-        User u = new User();
+        List<InnderClass> l = new ArrayList<>();
+        InnderClass u = new InnderClass();
         u.name = "z3    ";
         u.value = "l4";
         l.add(u);
         l.stream().map(e -> e.value);
         l.forEach(e -> System.out.println(e.value));
-        for (User user : l) {
+        for (InnderClass user : l) {
             System.out.println(user.name);
         }
     }
@@ -53,7 +53,7 @@ public class NestedDemo {
         private List<Object> lst;
     }
     
-    public static class User {
+    public static class InnderClass {
         private String name;
         private String value;
     }
