@@ -13,13 +13,13 @@ package behavioural.template.lambda;
 public interface LambdaTemplateMethod {
     
     default void before() {
-        System.out.println("lambda --> before");
+        System.out.println("eight.lambda --> before");
     }
     
     void process();
     
     default void after() {
-        System.out.println("lambda --> after");
+        System.out.println("eight.lambda --> after");
     }
     
     default void run() {
