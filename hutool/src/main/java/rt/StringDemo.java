@@ -15,12 +15,20 @@ import java.util.stream.Stream;
  * @since 4/11/22 09:47
  */
 public class StringDemo {
-    
+
     @Test
     public void splitAndTrim() {
         String s = ", 1111 , 2222 ,3333,";
         // s = StrPool.COMMA.equals(s.substring(s.length() - 1)) ? s.substring(0, s.length() - 2) : s;
         Stream.of(s.split(StrPool.COMMA)).map(String::trim).forEach(e -> System.out.println(e.length()));//.map(Integer::parseInt).collect(Collectors.toList()).forEach(System.out::println);
         System.out.println(Stream.of(s.split(StrPool.COMMA)).map(String::trim).map(Integer::parseInt).count());
+    }
+
+    @Test
+    public void split() {
+        String param = "11:";
+        for (String s : param.split(StrPool.COLON)) {
+            System.out.println(s);
+        }
     }
 }

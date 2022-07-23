@@ -2,6 +2,7 @@ package collect;
 
 import cn.hutool.core.exceptions.ExceptionUtil;
 import org.junit.Test;
+import pojo.User;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -50,5 +51,10 @@ public class ListDemo {
             e.printStackTrace();
             System.out.println(ExceptionUtil.stacktraceToString(e));
         }
+    }
+
+    @Test
+    public void sub() {
+        System.out.println(User.getList().subList(3, 5));
     }
 }

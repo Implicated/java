@@ -1,5 +1,6 @@
 package extend.protect;
 
+import a.extend.protect.ClassOne;
 import org.junit.Test;
 
 /**
