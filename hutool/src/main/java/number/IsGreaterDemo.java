@@ -96,7 +96,7 @@ public class IsGreaterDemo {
 
     public static BigDecimal isGreater(BigDecimal bigNum1, BigDecimal bigNum2) {
         System.out.println("2========");
-        return NumberUtil.isGreater(bigNum1, bigNum2) ? bigNum1 : bigNum2;
+        return NumberUtil.isGreater(isGreater(bigNum1), isGreater(bigNum2)) ? isGreater(bigNum1) : isGreater(bigNum2);
     }
 
     public static BigDecimal isGreater(BigDecimal bigNum) {

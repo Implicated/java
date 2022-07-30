@@ -1,5 +1,6 @@
 package date;
 
+import cn.hutool.core.date.DateUtil;
 import cn.hutool.core.date.StopWatch;
 import org.junit.Test;
 
@@ -16,8 +17,17 @@ import java.util.concurrent.TimeUnit;
  * @since 3/31/22 11:44
  */
 public class DateUtilDemo {
-    
     @Test
+    public void week() {
+        System.out.println(DateUtil.weekOfYear(new Date()));
+    }
+
+    @Test
+    public void tomorrow() {
+        System.out.println(DateUtil.today());
+        System.out.println(DateUtil.formatDate(DateUtil.tomorrow()));
+    }
+
     public void spend() throws Exception {
         StopWatch stopWatch = new StopWatch();
         stopWatch.start();
