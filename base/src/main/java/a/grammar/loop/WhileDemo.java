@@ -1,4 +1,4 @@
-package a.grammar.cycle;
+package a.grammar.loop;
 
 import org.junit.Test;
 
@@ -16,7 +16,7 @@ import java.util.Set;
  * @since 1/11/22 16:11
  */
 public class WhileDemo {
-    
+
     @Test
     public void one() {
         Set<Integer> set = new HashSet<>();
@@ -28,6 +28,20 @@ public class WhileDemo {
             System.out.println(redisKey);
         }
     }
-    
-    
+
+    @Test
+    public void two() {
+        int i = 0;
+        while (true) {
+            i++;
+            System.out.println("hello:" + i);
+            if (i > 20) {
+                break;
+            }
+            if (i > 9) {
+                continue;
+            }
+            System.out.println(i);
+        }
+    }
 }
